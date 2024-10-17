@@ -7,10 +7,10 @@ namespace Tyuiu.BaldinAA.Sprint2.Task5.V9.Lib
         public string FindDateOfNextDay(int m, int n)
         {
             string res;
-            m += 1;
-            if (m == 32)
-            { m = 1; n += 1; }
-            res = m.ToString("D2") + ".";
+            n += 1;
+            if (n == 32)
+            { n = 1; m += 1; }
+            res = n.ToString("D2") + ".";
             switch (n)
             {
                 case 1:
