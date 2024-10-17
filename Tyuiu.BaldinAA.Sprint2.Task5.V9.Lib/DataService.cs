@@ -6,34 +6,53 @@ namespace Tyuiu.BaldinAA.Sprint2.Task5.V9.Lib
     {
         public string FindDateOfNextDay(int m, int n)
         {
+            string res;
+            m += 1;
+            if (m == 32)
+            { m = 1; n += 1; }
+            res = m.ToString("D2") + ".";
             switch (n)
             {
                 case 1:
-                    return m == 31 ? "1.02" : $"{m + 1}.01";
+                    res += "01";
+                    break;
                 case 2:
-                    return m == 28 ? "1.03" : $"{m + 1}.02";
+                    res += "02";
+                    break;
                 case 3:
-                    return m == 31 ? "1.04" : $"{m + 1}.03";
+                    res += "03";
+                    break;
                 case 4:
-                    return m == 30 ? "1.05" : $"{m + 1}.04";
+                    res += "04";
+                    break;
                 case 5:
-                    return m == 31 ? "1.06" : $"{m + 1}.05";
+                    res += "05";
+                    break;
                 case 6:
-                    return m == 30 ? "1.07" : $"{m + 1}.06";
+                    res += "06";
+                    break;
                 case 7:
-                    return m == 31 ? "1.08" : $"{m + 1}.07";
+                    res += "07";
+                    break;
                 case 8:
-                    return m == 31 ? "1.09" : $"{m + 1}.08";
+                    res += "08";
+                    break;
                 case 9:
-                    return m == 30 ? "1.10" : $"{m + 1}.09";
+                    res += "09";
+                    break;
                 case 10:
-                    return m == 31 ? "1.11" : $"{m + 1}.10";
+                    res += "10";
+                    break;
                 case 11:
-                    return m == 30 ? "1.12" : $"{m + 1}.11";
+                    res += "11";
+                    break;
                 case 12:
-                    return $"{m + 1}.12";
+                    res += "12";
+                    break;
+                default: throw new NotImplementedException();
             }
-            return "";
+
+            return res;
         }
     };
 }
